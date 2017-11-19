@@ -1,0 +1,7 @@
+{
+  "development": {
+    "url": "postgres://omoxhpnt:t3Mx4VwNTs-VmGPv32NZLMCLlordOj2C@horton.elephantsql.com:5432/omoxhpnt",
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres"
+  }
+}

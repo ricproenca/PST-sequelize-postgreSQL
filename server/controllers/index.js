@@ -1,3 +1,3 @@
-const institution = require("./institution");
+import institution from "./institution";
 
 module.exports = { institution };

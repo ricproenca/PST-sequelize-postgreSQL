@@ -1,21 +1,11 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
-  var institution = sequelize.define(
-    "institution",
-    {
-      institution: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      comments: DataTypes.STRING
+  const institution = sequelize.define("institution", {
+    institution: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
-    {
-      classMethods: {
-        associate: function(models) {
-          // associations can be defined here
-        }
-      }
-    }
-  );
+    comments: DataTypes.STRING
+  });
   return institution;
 };

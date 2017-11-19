@@ -1,14 +1,12 @@
-const Controllers = require("../controllers");
-
-const institutionController = Controllers.institution;
+import { institution } from "../controllers";
 
 module.exports = app => {
   // INSTITUTIONS ROUTES
-  app.get("/api/institution", institutionController.list);
-  app.get("/api/institution/:institutionId", institutionController.retrieve);
-  app.post("/api/institution", institutionController.create);
-  app.put("/api/institution/:institutionId", institutionController.update);
-  app.delete("/api/institution/:institutionId", institutionController.destroy);
+  app.get("/api/institution", institution.list);
+  app.get("/api/institution/:institutionId", institution.retrieve);
+  app.post("/api/institution", institution.create);
+  app.put("/api/institution/:institutionId", institution.update);
+  app.delete("/api/institution/:institutionId", institution.destroy);
 
   // BASE ROUTE
   app.get("/api", (req, res) =>

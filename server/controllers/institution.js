@@ -1,4 +1,5 @@
-const institution = require("../models/").institution;
+import models from "../models/";
+const institution = models.institution;
 
 module.exports = {
   create(req, res) {

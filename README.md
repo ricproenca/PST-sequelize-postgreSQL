@@ -21,7 +21,7 @@ sequelize db:create project-school-timetable
 
 3. To actually export our database URL into our environment
 
-export DATABASE_URL=postgres://omoxhpnt:t3Mx4VwNTs-VmGPv32NZLMCLlordOj2C@horton.elephantsql.com:5432/omoxhpnt
+export DATABASE_URL=DATABASE_URL
 
 4. Generate models
 
@@ -39,5 +39,3 @@ npm i -g sequelize-cli http-server
 
 - ES6
 - rename table
-- environment development/production with dotenv
-- models/index.js -> see development /production flow

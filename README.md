@@ -37,5 +37,4 @@ npm i -g sequelize-cli http-server
 
 # TODO
 
-- ES6
 - rename table

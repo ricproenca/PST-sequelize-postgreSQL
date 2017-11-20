@@ -47,12 +47,6 @@
 - name: string [PK]
 - seats: number
 
-### SubjectsPerClasses [Subjects <-> Classes]
-
-- id: auto [PK]
-- subject_name: text [FK - Subjects]
-- class_name: number [FK - Classes]
-
 ### Students
 
 - id: auto [PK]
@@ -60,6 +54,12 @@
 - age: number
 - class_number: number
 - class_name: string [FK - Classes]
+
+### SubjectsPerClasses [Subjects <-> Classes]
+
+- id: auto [PK]
+- subject_name: text [FK - Subjects]
+- class_name: number [FK - Classes]
 
 ### QualifiedTeachers [Subjects <-> Teachers]
 

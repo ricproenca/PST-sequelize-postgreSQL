@@ -1,0 +1,86 @@
+swagger: '2.0'
+info:
+  description: |
+    Automatic timetable scheduling for schools  at
+    [project-school-timetable](project-school-timetable-server).
+  version: 1.0.0
+  title: Project School Timetables
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+# host: petstore.swagger.io
+# basePath: /v2
+tags:
+- name: Institutions
+  description: Everything about school info
+- name: Days
+  description: Days
+- name: Periods
+  description: Periods
+- name: Subjects
+  description: Subjects
+- name: Teachers
+  description: Teachers
+- name: Classes
+  description: Classes
+- name: Rooms
+  description: Rooms
+- name: Students
+  description: Students
+# schemes:
+# - http
+paths:
+  /institutions:
+    get:
+      tags:
+      - Institutions
+      summary: Get all information abour Intitutions
+      description: Returns all institutions
+      operationId: getInstitutions
+      produces:
+      - application/json
+      responses:
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/InstitutionModel'
+    post:
+      tags:
+      - Institutions
+      summary: Add a new institution
+      operationId: addInstitution
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: Institution name to be added
+        required: true
+        schema:
+          $ref: '#/definitions/InstitutionModel'
+      responses:
+        405:
+          description: Invalid input
+definitions:
+  InstitutionModel:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name:
+        type: string
+      description:
+        type: string
+      image:
+        type: string
+host: virtserver.swaggerhub.com
+basePath: /ricproenca7/project-school-timetable/1.0.0
+schemes:
+ - https
+ - http
